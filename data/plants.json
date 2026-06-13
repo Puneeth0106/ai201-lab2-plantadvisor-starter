@@ -2,13 +2,28 @@
   "pothos": {
     "display_name": "Pothos",
     "scientific_name": "Epipremnum aureum",
-    "aliases": ["golden pothos", "devil's ivy", "hunter's robe", "silver vine"],
+    "aliases": [
+      "golden pothos",
+      "devil's ivy",
+      "hunter's robe",
+      "silver vine"
+    ],
     "difficulty": "easy",
     "watering": {
       "frequency": "every 1–2 weeks",
       "description": "Allow the top inch of soil to dry out between waterings. Drooping leaves are a reliable signal it's time to water.",
-      "overwatering_signs": ["yellowing leaves", "mushy stems", "root rot", "gnats in soil"],
-      "underwatering_signs": ["wilting", "dry brown leaf tips", "crispy edges", "soil pulling away from pot edges"]
+      "overwatering_signs": [
+        "yellowing leaves",
+        "mushy stems",
+        "root rot",
+        "gnats in soil"
+      ],
+      "underwatering_signs": [
+        "wilting",
+        "dry brown leaf tips",
+        "crispy edges",
+        "soil pulling away from pot edges"
+      ]
     },
     "light": {
       "requirement": "low to bright indirect",
@@ -30,17 +45,30 @@
       "winter": "Water sparingly. Bright indirect light becomes more important. No fertilizer."
     }
   },
-
   "snake_plant": {
     "display_name": "Snake Plant",
     "scientific_name": "Dracaena trifasciata",
-    "aliases": ["sansevieria", "mother-in-law's tongue", "saint george's sword", "viper's bowstring hemp"],
+    "aliases": [
+      "sansevieria",
+      "mother-in-law's tongue",
+      "saint george's sword",
+      "viper's bowstring hemp"
+    ],
     "difficulty": "easy",
     "watering": {
       "frequency": "every 2–6 weeks depending on season",
       "description": "One of the most drought-tolerant houseplants. Allow soil to dry completely between waterings. When in doubt, wait.",
-      "overwatering_signs": ["mushy base", "yellowing leaves at the base", "root rot", "soft spots on leaves"],
-      "underwatering_signs": ["wrinkled or curling leaves", "dry brown tips", "leaves leaning outward"]
+      "overwatering_signs": [
+        "mushy base",
+        "yellowing leaves at the base",
+        "root rot",
+        "soft spots on leaves"
+      ],
+      "underwatering_signs": [
+        "wrinkled or curling leaves",
+        "dry brown tips",
+        "leaves leaning outward"
+      ]
     },
     "light": {
       "requirement": "low to bright indirect",
@@ -62,17 +90,29 @@
       "winter": "Water once a month or less. Keep away from cold drafts."
     }
   },
-
   "zz_plant": {
     "display_name": "ZZ Plant",
     "scientific_name": "Zamioculcas zamiifolia",
-    "aliases": ["zanzibar gem", "zuzu plant", "eternity plant", "aroid palm"],
+    "aliases": [
+      "zanzibar gem",
+      "zuzu plant",
+      "eternity plant",
+      "aroid palm"
+    ],
     "difficulty": "easy",
     "watering": {
       "frequency": "every 2–3 weeks",
       "description": "The rhizomes store water, making it very forgiving. Let soil dry completely before watering.",
-      "overwatering_signs": ["yellowing leaves", "mushy rhizomes", "root rot"],
-      "underwatering_signs": ["leaves dropping", "wrinkled stems", "leaf yellowing starting from the bottom"]
+      "overwatering_signs": [
+        "yellowing leaves",
+        "mushy rhizomes",
+        "root rot"
+      ],
+      "underwatering_signs": [
+        "leaves dropping",
+        "wrinkled stems",
+        "leaf yellowing starting from the bottom"
+      ]
     },
     "light": {
       "requirement": "low to moderate indirect",
@@ -94,17 +134,28 @@
       "winter": "Minimal water needed. Growth will slow or stop entirely."
     }
   },
-
   "spider_plant": {
     "display_name": "Spider Plant",
     "scientific_name": "Chlorophytum comosum",
-    "aliases": ["airplane plant", "ribbon plant", "hen and chickens plant"],
+    "aliases": [
+      "airplane plant",
+      "ribbon plant",
+      "hen and chickens plant"
+    ],
     "difficulty": "easy",
     "watering": {
       "frequency": "every 1–2 weeks",
       "description": "Keep soil evenly moist during the growing season, slightly drier in winter. Sensitive to fluoride — use filtered or distilled water if possible.",
-      "overwatering_signs": ["root rot", "brown mushy roots", "wilting despite wet soil"],
-      "underwatering_signs": ["pale leaves", "drooping", "dry soil pulling from pot edges"]
+      "overwatering_signs": [
+        "root rot",
+        "brown mushy roots",
+        "wilting despite wet soil"
+      ],
+      "underwatering_signs": [
+        "pale leaves",
+        "drooping",
+        "dry soil pulling from pot edges"
+      ]
     },
     "light": {
       "requirement": "bright indirect",
@@ -126,17 +177,29 @@
       "winter": "Water less frequently. Avoid cold windowsills."
     }
   },
-
   "peace_lily": {
     "display_name": "Peace Lily",
     "scientific_name": "Spathiphyllum wallisii",
-    "aliases": ["spathiphyllum", "white sails plant", "spathe flower"],
+    "aliases": [
+      "spathiphyllum",
+      "white sails plant",
+      "spathe flower"
+    ],
     "difficulty": "easy",
     "watering": {
       "frequency": "every 1–2 weeks",
       "description": "Likes consistently moist (not wet) soil. Peace lilies will dramatically droop when thirsty — and bounce back quickly once watered. This drooping is a helpful signal, not permanent damage.",
-      "overwatering_signs": ["yellowing leaves", "brown leaf tips", "root rot", "gnats"],
-      "underwatering_signs": ["dramatic drooping", "wilted leaves", "dry soil"]
+      "overwatering_signs": [
+        "yellowing leaves",
+        "brown leaf tips",
+        "root rot",
+        "gnats"
+      ],
+      "underwatering_signs": [
+        "dramatic drooping",
+        "wilted leaves",
+        "dry soil"
+      ]
     },
     "light": {
       "requirement": "low to medium indirect",
@@ -159,17 +222,30 @@
       "winter": "Keep away from cold windows. Water sparingly."
     }
   },
-
   "aloe_vera": {
     "display_name": "Aloe Vera",
     "scientific_name": "Aloe vera",
-    "aliases": ["aloe", "true aloe", "medicinal aloe", "burn plant"],
+    "aliases": [
+      "aloe",
+      "true aloe",
+      "medicinal aloe",
+      "burn plant"
+    ],
     "difficulty": "easy",
     "watering": {
       "frequency": "every 2–3 weeks in summer, monthly in winter",
       "description": "Water deeply and infrequently. Allow soil to dry completely between waterings. Aloe stores water in its leaves and will rot quickly in soggy soil.",
-      "overwatering_signs": ["mushy, translucent leaves", "brown soft spots", "leaves falling off", "root rot"],
-      "underwatering_signs": ["leaves curling inward", "thin or shriveled leaves", "dry brown tips"]
+      "overwatering_signs": [
+        "mushy, translucent leaves",
+        "brown soft spots",
+        "leaves falling off",
+        "root rot"
+      ],
+      "underwatering_signs": [
+        "leaves curling inward",
+        "thin or shriveled leaves",
+        "dry brown tips"
+      ]
     },
     "light": {
       "requirement": "bright indirect to some direct sun",
@@ -192,17 +268,31 @@
       "winter": "Water monthly or less. Keep above 50°F. No fertilizer."
     }
   },
-
   "monstera": {
     "display_name": "Monstera",
     "scientific_name": "Monstera deliciosa",
-    "aliases": ["swiss cheese plant", "split-leaf philodendron", "ceriman", "fruit salad plant"],
+    "aliases": [
+      "swiss cheese plant",
+      "split-leaf philodendron",
+      "ceriman",
+      "fruit salad plant"
+    ],
     "difficulty": "moderate",
     "watering": {
       "frequency": "every 1–2 weeks",
       "description": "Water thoroughly when the top 2 inches of soil feel dry. Monsteras like to dry out slightly between waterings but shouldn't stay bone dry.",
-      "overwatering_signs": ["yellowing lower leaves", "root rot", "drooping with wet soil", "mushy stems"],
-      "underwatering_signs": ["drooping", "curling leaves", "slow growth", "dry edges"]
+      "overwatering_signs": [
+        "yellowing lower leaves",
+        "root rot",
+        "drooping with wet soil",
+        "mushy stems"
+      ],
+      "underwatering_signs": [
+        "drooping",
+        "curling leaves",
+        "slow growth",
+        "dry edges"
+      ]
     },
     "light": {
       "requirement": "bright indirect",
@@ -225,17 +315,31 @@
       "winter": "Minimal water. No fertilizer. Keep away from cold drafts."
     }
   },
-
   "rubber_plant": {
     "display_name": "Rubber Plant",
     "scientific_name": "Ficus elastica",
-    "aliases": ["rubber fig", "rubber bush", "rubber tree", "indian rubber bush"],
+    "aliases": [
+      "rubber fig",
+      "rubber bush",
+      "rubber tree",
+      "indian rubber bush"
+    ],
     "difficulty": "moderate",
     "watering": {
       "frequency": "every 1–2 weeks",
       "description": "Water when the top inch of soil feels dry. Rubber plants hate inconsistency — try to water on a regular schedule. Wipe leaves with a damp cloth occasionally to remove dust.",
-      "overwatering_signs": ["yellowing lower leaves", "drooping", "root rot", "leaf drop"],
-      "underwatering_signs": ["drooping", "dry soil", "lower leaves dropping", "leaves curling"]
+      "overwatering_signs": [
+        "yellowing lower leaves",
+        "drooping",
+        "root rot",
+        "leaf drop"
+      ],
+      "underwatering_signs": [
+        "drooping",
+        "dry soil",
+        "lower leaves dropping",
+        "leaves curling"
+      ]
     },
     "light": {
       "requirement": "bright indirect",
@@ -258,17 +362,28 @@
       "winter": "Water sparingly. Keep away from cold windows. No fertilizer."
     }
   },
-
   "boston_fern": {
     "display_name": "Boston Fern",
     "scientific_name": "Nephrolepis exaltata",
-    "aliases": ["sword fern", "ladder fern", "wild boston fern"],
+    "aliases": [
+      "sword fern",
+      "ladder fern",
+      "wild boston fern"
+    ],
     "difficulty": "moderate",
     "watering": {
       "frequency": "every few days — keep soil consistently moist",
       "description": "Boston ferns want consistently moist soil — not wet, not dry. This is the most demanding plant in the database for watering consistency. They will brown quickly if allowed to dry out.",
-      "overwatering_signs": ["yellowing fronds", "root rot", "soggy soil with bad smell"],
-      "underwatering_signs": ["browning fronds", "fronds drying and dropping", "crispy tips"]
+      "overwatering_signs": [
+        "yellowing fronds",
+        "root rot",
+        "soggy soil with bad smell"
+      ],
+      "underwatering_signs": [
+        "browning fronds",
+        "fronds drying and dropping",
+        "crispy tips"
+      ]
     },
     "light": {
       "requirement": "bright indirect",
@@ -291,17 +406,30 @@
       "winter": "Most challenging season. Dry indoor air causes browning. Use a humidifier."
     }
   },
-
   "orchid": {
     "display_name": "Orchid",
     "scientific_name": "Phalaenopsis spp.",
-    "aliases": ["phalaenopsis", "moth orchid", "phal orchid", "butterfly orchid"],
+    "aliases": [
+      "phalaenopsis",
+      "moth orchid",
+      "phal orchid",
+      "butterfly orchid"
+    ],
     "difficulty": "moderate",
     "watering": {
       "frequency": "every 1–2 weeks",
       "description": "Water by soaking the roots (or pot) thoroughly, then let drain and dry almost completely before watering again. Roots should be silver-gray when dry, green when wet. Many orchids come in clear pots specifically so you can check root moisture.",
-      "overwatering_signs": ["mushy brown roots", "yellowing leaves", "crown rot", "limp leaves that don't firm up when watered"],
-      "underwatering_signs": ["silver-gray roots for more than 2 weeks", "wrinkled leaves", "limp pseudobulbs"]
+      "overwatering_signs": [
+        "mushy brown roots",
+        "yellowing leaves",
+        "crown rot",
+        "limp leaves that don't firm up when watered"
+      ],
+      "underwatering_signs": [
+        "silver-gray roots for more than 2 weeks",
+        "wrinkled leaves",
+        "limp pseudobulbs"
+      ]
     },
     "light": {
       "requirement": "bright indirect",
@@ -324,17 +452,29 @@
       "winter": "Reduce fertilizing. Cool nights (55–60°F) encourage reblooming."
     }
   },
-
   "fiddle_leaf_fig": {
     "display_name": "Fiddle Leaf Fig",
     "scientific_name": "Ficus lyrata",
-    "aliases": ["ficus lyrata", "fiddle fig", "banjo fig"],
+    "aliases": [
+      "ficus lyrata",
+      "fiddle fig",
+      "banjo fig"
+    ],
     "difficulty": "hard",
     "watering": {
       "frequency": "every 1–2 weeks",
       "description": "Water when the top 2 inches of soil are dry. Consistency is everything — same schedule, same amount, same location. Fiddle leaf figs react badly to change.",
-      "overwatering_signs": ["brown spots with yellow halos", "root rot", "soft wet spots on leaves", "leaf drop"],
-      "underwatering_signs": ["brown dry edges", "crunchy brown spots without yellow halos", "curling leaves"]
+      "overwatering_signs": [
+        "brown spots with yellow halos",
+        "root rot",
+        "soft wet spots on leaves",
+        "leaf drop"
+      ],
+      "underwatering_signs": [
+        "brown dry edges",
+        "crunchy brown spots without yellow halos",
+        "curling leaves"
+      ]
     },
     "light": {
       "requirement": "bright indirect, consistent",
@@ -357,17 +497,29 @@
       "winter": "Minimal water. No fertilizer. Keep far from cold windows and heating vents."
     }
   },
-
   "calathea": {
     "display_name": "Calathea",
     "scientific_name": "Calathea ornata",
-    "aliases": ["prayer plant", "pin-stripe calathea", "peacock plant", "cathedral windows"],
+    "aliases": [
+      "prayer plant",
+      "pin-stripe calathea",
+      "peacock plant",
+      "cathedral windows"
+    ],
     "difficulty": "hard",
     "watering": {
       "frequency": "every 1–2 weeks",
       "description": "Keep soil consistently moist but not soggy. Calatheas are sensitive to minerals in tap water — use filtered, distilled, or rainwater to prevent brown edges. Let water sit overnight if using tap.",
-      "overwatering_signs": ["yellowing leaves", "root rot", "limp stems"],
-      "underwatering_signs": ["curling leaves", "brown crispy edges", "leaves remaining curled in the morning"]
+      "overwatering_signs": [
+        "yellowing leaves",
+        "root rot",
+        "limp stems"
+      ],
+      "underwatering_signs": [
+        "curling leaves",
+        "brown crispy edges",
+        "leaves remaining curled in the morning"
+      ]
     },
     "light": {
       "requirement": "low to medium indirect",
@@ -390,17 +542,29 @@
       "winter": "Hardest season for calatheas. Indoor heating dries air significantly. Use a humidifier."
     }
   },
-
   "philodendron": {
     "display_name": "Philodendron",
     "scientific_name": "Philodendron hederaceum",
-    "aliases": ["heartleaf philodendron", "sweetheart plant", "velvet leaf philodendron"],
+    "aliases": [
+      "heartleaf philodendron",
+      "sweetheart plant",
+      "velvet leaf philodendron"
+    ],
     "difficulty": "easy",
     "watering": {
       "frequency": "every 1–2 weeks",
       "description": "Water when the top inch of soil feels dry. Similar care to pothos — both are forgiving and communicate their needs through drooping.",
-      "overwatering_signs": ["yellowing leaves", "root rot", "mushy stems"],
-      "underwatering_signs": ["drooping", "wilting", "dry soil", "brown edges"]
+      "overwatering_signs": [
+        "yellowing leaves",
+        "root rot",
+        "mushy stems"
+      ],
+      "underwatering_signs": [
+        "drooping",
+        "wilting",
+        "dry soil",
+        "brown edges"
+      ]
     },
     "light": {
       "requirement": "low to bright indirect",
@@ -423,17 +587,28 @@
       "winter": "Water sparingly. Provide as much light as possible."
     }
   },
-
   "chinese_evergreen": {
     "display_name": "Chinese Evergreen",
     "scientific_name": "Aglaonema commutatum",
-    "aliases": ["aglaonema", "philippine evergreen", "poison dart plant"],
+    "aliases": [
+      "aglaonema",
+      "philippine evergreen",
+      "poison dart plant"
+    ],
     "difficulty": "easy",
     "watering": {
       "frequency": "every 1–2 weeks",
       "description": "Allow the top inch to dry between waterings. More tolerant than most of both under and overwatering, making it very beginner-friendly.",
-      "overwatering_signs": ["yellowing leaves", "root rot", "soggy soil"],
-      "underwatering_signs": ["wilting", "drooping", "dry edges"]
+      "overwatering_signs": [
+        "yellowing leaves",
+        "root rot",
+        "soggy soil"
+      ],
+      "underwatering_signs": [
+        "wilting",
+        "drooping",
+        "dry edges"
+      ]
     },
     "light": {
       "requirement": "low to medium indirect",
@@ -455,17 +630,33 @@
       "winter": "Minimal water. Keep away from drafts."
     }
   },
-
   "succulent": {
     "display_name": "Succulent",
     "scientific_name": "Various (Echeveria, Sedum, Haworthia, and others)",
-    "aliases": ["echeveria", "sedum", "haworthia", "hen and chicks", "stone plant", "jade plant", "burros tail"],
+    "aliases": [
+      "echeveria",
+      "sedum",
+      "haworthia",
+      "hen and chicks",
+      "stone plant",
+      "jade plant",
+      "burros tail"
+    ],
     "difficulty": "easy",
     "watering": {
       "frequency": "every 2–3 weeks in growing season, monthly or less in winter",
       "description": "Water thoroughly, then allow soil to dry out completely before watering again. 'Soak and dry' method. The number one killer of succulents is too much water.",
-      "overwatering_signs": ["mushy translucent leaves", "leaves falling off with a touch", "black or brown mushy stem base", "root rot"],
-      "underwatering_signs": ["wrinkled or shriveled leaves", "leaves feel less plump than usual", "bottom leaves drying and dropping"]
+      "overwatering_signs": [
+        "mushy translucent leaves",
+        "leaves falling off with a touch",
+        "black or brown mushy stem base",
+        "root rot"
+      ],
+      "underwatering_signs": [
+        "wrinkled or shriveled leaves",
+        "leaves feel less plump than usual",
+        "bottom leaves drying and dropping"
+      ]
     },
     "light": {
       "requirement": "bright indirect to direct sun",
