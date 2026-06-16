@@ -3,7 +3,7 @@ from groq import Groq
 from config import GROQ_API_KEY, LLM_MODEL, MAX_TOOL_ROUNDS
 from tools import lookup_plant, get_seasonal_conditions
 
-_client = Groq(api_key=GROQ_API_KEY)
+client = Groq(api_key=GROQ_API_KEY)
 
 # ──────────────────────────────────────────────
 # Tool definitions
@@ -104,6 +104,22 @@ def dispatch_tool(tool_name: str, tool_args: dict) -> str:
 # Agent loop
 # ──────────────────────────────────────────────
 
+user_query ="How do I care for my Monstera this winter?"
+
+messages =[
+    {'role':'system',
+     'content': 'You are a plant advisory assistant. Use the provided tools to get relavant info to answer user query'},
+     {'role':'user',
+     'content': user_query}
+]
+
+response= client.chat.completions.create(
+    model= "openai/gpt-oss-120b",
+    messages=messages,
+    tools=TOOL_DEFINITIONS,
+    tool_choice="auto" 
+)
+
 def run_agent(user_message: str, history: list) -> str:
     """
     Run the plant care agent for one user turn and return its response.
@@ -132,4 +148,38 @@ def run_agent(user_message: str, history: list) -> str:
 
     Before writing code, complete specs/agent-loop-spec.md.
     """
+    messages =[
+    {'role':'system',
+     'content': 'You are a plant advisory assistant. Use the provided tools to get relavant info to answer user query'},
+     {'role':'user',
+     'content': user_query}
+    ]
+
+    response= client.chat.completions.create(
+        model= "openai/gpt-oss-120b",
+        messages=messages,
+        tools=TOOL_DEFINITIONS,
+        tool_choice="auto" 
+    )
+
+    max_iterations =10
+    iteration= 0
+
+    while response.choices[0].message.tool_calls and iteration <max_iterations:
+        iteration +=1
+        messages.append(response.choices[0].message)
+
+        print(f"Iteration {iteration}: Model called {len(response.choices[0].message.tool_calls)} tool(s)")
+
+        for tool_call in response.choices[0].message.tool_calls:
+            function_name = tool_call.function.name
+            function_args = json.loads(tool_call.function.arguments)
+
+            print(f"  → {function_name}({function_args})")
+
+            
+
+
+
+
     return "🌱 Agent not yet implemented. Complete Milestone 2 to activate the Plant Advisor."
