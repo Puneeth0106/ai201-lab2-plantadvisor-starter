@@ -104,22 +104,6 @@ def dispatch_tool(tool_name: str, tool_args: dict) -> str:
 # Agent loop
 # ──────────────────────────────────────────────
 
-user_query ="How do I care for my Monstera this winter?"
-
-messages =[
-    {'role':'system',
-     'content': 'You are a plant advisory assistant. Use the provided tools to get relavant info to answer user query'},
-     {'role':'user',
-     'content': user_query}
-]
-
-response= client.chat.completions.create(
-    model= "openai/gpt-oss-120b",
-    messages=messages,
-    tools=TOOL_DEFINITIONS,
-    tool_choice="auto" 
-)
-
 def run_agent(user_message: str, history: list) -> str:
     """
     Run the plant care agent for one user turn and return its response.
@@ -148,38 +132,68 @@ def run_agent(user_message: str, history: list) -> str:
 
     Before writing code, complete specs/agent-loop-spec.md.
     """
-    messages =[
-    {'role':'system',
-     'content': 'You are a plant advisory assistant. Use the provided tools to get relavant info to answer user query'},
-     {'role':'user',
-     'content': user_query}
-    ]
 
+    #1. Load message history
+    ## System prompt or assistant message comes first because ordering matters for API. 
+    messages =[{'role':'system', 'content': SYSTEM_PROMPT}]
+
+    ## Append history to the messages
+    for message in history:
+        messages.append({'role':message['role'], 'content': message['content']})
+
+    ## Append the new message    
+    messages.append({'role':'user', 'content': user_message})
+
+    #2. Make a LLM Call
+
+    ## Definte tool schema and pass them to tools and tool_choice is a argument tells llm to choose tool call automatically
     response= client.chat.completions.create(
-        model= "openai/gpt-oss-120b",
+        model=LLM_MODEL,
         messages=messages,
         tools=TOOL_DEFINITIONS,
         tool_choice="auto" 
     )
 
-    max_iterations =10
-    iteration= 0
+    #3. Loop till the max tool calls and return llm response
 
-    while response.choices[0].message.tool_calls and iteration <max_iterations:
-        iteration +=1
-        messages.append(response.choices[0].message)
+    ## Making sure llm doesnt go out of range
+    for i in range(MAX_TOOL_ROUNDS):
+        # Assistant message is message from llm
+        assistant_message = response.choices[0].message
 
-        print(f"Iteration {iteration}: Model called {len(response.choices[0].message.tool_calls)} tool(s)")
+        # Checking for any tool calls from llm
+        if not assistant_message.tool_calls:
+            # No tool calls mean llm has the final answer
+            break
 
-        for tool_call in response.choices[0].message.tool_calls:
-            function_name = tool_call.function.name
-            function_args = json.loads(tool_call.function.arguments)
+        # Append tool calls before appending tool results: Api requires ordering matter    
+        messages.append(assistant_message)
 
-            print(f"  → {function_name}({function_args})")
+        # Executing and appending tool results
+        for tool_call in assistant_message.tool_calls:
+            tool_name= tool_call.function.name
+            # Raw args is a JSON string so we need to convert into dictionary
+            raw_args= tool_call.function.arguments
+            tool_args = json.loads(raw_args) if raw_args else {}
+            if not isinstance(tool_args, dict):
+                tool_args = {}
 
-            
+            ## Calling tool router: dispatch_tool
+            tool_result = dispatch_tool(tool_name, tool_args)
+
+            ## Append the tool result
+            messages.append({
+                "role": "tool",
+                "tool_call_id": tool_call.id,
+                "content": tool_result,
+            })
+
+        #4. Call the LLM again with updated messages    
+        response = client.chat.completions.create(
+                    model=LLM_MODEL,
+                    messages=messages,
+                    tools=TOOL_DEFINITIONS,
+                    tool_choice="auto",)
 
 
-
-
-    return "🌱 Agent not yet implemented. Complete Milestone 2 to activate the Plant Advisor."
+    return response.choices[0].message.content or   "I couldn't generate a response."
