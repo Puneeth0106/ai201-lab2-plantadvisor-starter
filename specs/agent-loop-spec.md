@@ -129,7 +129,8 @@ for tool_call in assistant_message.tool_calls:
 *The loop should stop when: (a) the LLM returns a response with no tool calls, OR (b) the MAX_TOOL_ROUNDS limit is reached. Describe how you will detect each condition and what you will return in each case.*
 
 ```
-[your answer here]
+[ The loop gets terminated when LLM finds no tool calls and that means it knows the answer without referring to the tool call. That's one way. 
+The other way is that if you reach the maximum tool calls then the loop doesn't go through; in that case  we will return the final response of llm or  " I couldn't generate a response" ]
 ```
 
 ---
@@ -139,7 +140,7 @@ for tool_call in assistant_message.tool_calls:
 *Once the loop exits because there are no more tool calls, how do you extract the text content from the response object? What field holds the string you should return?*
 
 ```
-[your answer here]
+[ Usually responses.choices[0].message.content is the final response from the LLM by taking  all the messages like history, user message, tool calls and tool results. If no such response comes up, it says I could not generate the response. ]
 ```
 
 ---
@@ -152,19 +153,26 @@ for tool_call in assistant_message.tool_calls:
 
 ```
 Query: "How should I care for my calathea?"
-Round 1 tool call: [tool name, args]
-Round 2 tool call: [tool name, args] (if any)
-Final response: [brief description]
+Round 1 tool call: [lookup_plant, {'plant_name': 'calathea'}]
+Round 2 tool call: [et_seasonal_conditions, {}] (if any)
+Final response: [According to the care data for your Calathea, it requires consistent moisture, but make sure not to overwater, as this can lead to root rot and other issues. Use filtered or distilled water to prevent brown edges on the leaves. The plant prefers low to medium indirect light, and high humidity (50%+), which can be achieved with a humidifier, frequent misting, or by grouping it with other plants. Keep the temperature between 60-80°F (15-27°C) and avoid cold drafts. Fertilize your Calathea monthly during the growing season with a diluted balanced fertilizer.
+
+Given that it's currently summer, your Calathea will require more frequent watering due to the heat and dry air. Be careful not to overwater, and continue to fertilize regularly. Keep an eye out for pests like spider mites and fungus gnats, which thrive in hot and dry conditions. Make sure to provide your Calathea with bright, indirect light, and maintain high humidity to keep it happy and healthy.]
 ```
 
 **What happens when you ask about a plant that isn't in the database?**
 
 ```
-[describe the behavior you observed]
+Query: How do I care for my string of pearls?
+Tool Calls : [lookup_plant, {'plant_name': 'string of pearls'}]
+Result: {"found": false, "name": "string of pearls", "message": "'string of pearls' did not match any key, display name, scienti"}
+Output: I couldn't find any information on a plant called 'string of pearls' in my database. However, I believe you may be referring to Senecio rowleyanus, which is a common houseplant with the nickname 'string of pearls'. If that's correct, here are some general care tips: string of pearls prefers bright, indirect light and well-draining soil. It's also important to water sparingly, allowing the soil to dry out completely between waterings. A temperature range of 65-75°F (18-24°C) is ideal, and fertilization during the growing season (spring and summer) can promote healthy growth. Keep in mind that these are general guidelines, and the specific needs of your plant may vary. If you have any further questions or concerns, feel free to ask.
+
+My experience: Firstly it had a call with string of pearls and looked into the database. Since it found out that there is no such plant called string of pearls, it came up with saying things like "I couldn't find any information" and also with its own knowledge it had made up an answer.
 ```
 
 **One thing about the tool call API that surprised you:**
 
 ```
-[your answer here]
+[  Tool calls are really fast rather than RAG, that's what I felt, because the information is flowing through the JSON format. I felt that tool calls should be implemented when it comes to when you have multiple data sources. ]
 ```
